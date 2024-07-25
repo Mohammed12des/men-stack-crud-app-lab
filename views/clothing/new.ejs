@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>clothing App</title>
+  </head>
+  <body>
+    <h1>Add a New clothing!</h1>
+    <form action="/clothing" method="POST">
+      <label for="name">Name:</label>
+      <input type="text" name="name" id="name" />
+      <input type="text" name="size" id="size" />
+      <label for="typeOfClothing">what is the type of the cloth?</label>
+      <input list="type">
+       <datalist id="typeOfClothing">
+           <option value="jacket">
+           <option value="shirt">
+           <option value="T-shirt">
+           <option value="Jines">
+        </datalist>
+      <button type="submit">Add clothes</button>
+    </form>
+  </body>
+</html>
