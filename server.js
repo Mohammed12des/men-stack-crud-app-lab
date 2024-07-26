@@ -11,20 +11,25 @@ app.use(express.urlencoded({ extended: false }));
 app.use(methodOverride("_method"));
 app.use(morgan ('dev'));
 
+
+
+  
+  
+
+
 app.get("/", async (req, res) => {
     res.render("index.ejs")
   });
-
-  //middelwaer
-  app.use(morgan('dev'));   
-  app.use(express.urlencoded({ extended: false }));
-
 
   app.get('/clothing/new', async(req,res)=>{
    res.render("clothing/new.ejs")
 
   })
-
+  app.post("/clothing", async (req, res) => {
+    console.log(req.body)
+    await Movie.create(req.body);
+    res.redirect("/clothing/new");
+});
 
 
 
