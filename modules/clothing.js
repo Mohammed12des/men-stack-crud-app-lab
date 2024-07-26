@@ -1,10 +1,11 @@
 const mongoose = require('mongoose');
-const { boolean } = require('webidl-conversions');
+
 
 const clothingSchema = new mongoose.Schema({
-  name: String,
-  size: String,
-});
+  name: { type: String, required: true },
+  size: {type: Number, required: false},
+  description: { type: String, required: false },
+})
 
 const Clothing = mongoose.model('clothing', clothingSchema);
 
