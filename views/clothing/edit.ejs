@@ -3,32 +3,33 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>movies Index</title>
+    <title>Clothing Index</title>
   </head>
-
   <body>
     <%- include('../partials/nav') %>
-    <!-- update the header -->
-    <h1>Edit <%= movie.name %></h1>
+    <h1>Edit <%= clothing.name %></h1>
     <form action="/clothing/<%=clothing._id%>?_method=PUT" method="POST">
-     <fieldset>
-      <label for="name">Name:</label>
-      <input type="text" name="name" id="name" value="<%= movie.name %>" />
-     </fieldset>
-
-     <fieldset>
-      <label for="size">size:</label>
-      <input type="number" name="size" id="size" value="<%= clothing.size %>" />
-     </fieldset>
-
-     <fieldset>
-      <label for="description">description:</label>
-      <textarea type="text" name="description" id="description" value="<%= clothing.description %>" ></textarea>
-     </fieldset>
-
-     <button type="submit">Update Fruit</button>
+      <fieldset>
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" value="<%= clothing.name %>" />
+      </fieldset>
+      <fieldset>
+        <label for="size">Size:</label>
+        <input
+          type="number"
+          name="size"
+          id="size"
+          value="<%= clothing.size %>"
+        />
+      </fieldset>
+      <fieldset>
+        <label for="description">Description:</label>
+        <textarea name="description" id="description">
+<%= clothing.description %></textarea
+        >
+      </fieldset>
+      <button type="submit">Update Clothing</button>
     </form>
-    <a href="/clothing">Back to movies</a>
+    <a href="/clothing">Back to clothing</a>
   </body>
-  
 </html>

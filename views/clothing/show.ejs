@@ -3,21 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%= clothe.name %></title> 
+    <title><%= clothing.name %></title>
   </head>
   <body>
     <%- include('../partials/nav') %>
-    <h1><%= clothing.name %></h1> 
+    <h1><%= clothing.name %></h1>
     <h4>size: <%= clothing.size %></h4>
     <p><%= clothing.description %></p>
     <form action="/clothing/<%=clothing._id%>?_method=DELETE" method="POST">
-        <button type="submit">Delete <%= clothing.name %></button>
-      </form>
-      
-      <form action="/clothing/<%=clothing._id%>/edit" method="GET">
-        <button type="submit">update <%= clothing.name %></button>
-      </form>
+      <button type="submit">Delete <%= clothing.name %></button>
+    </form>
 
-      <a href="/clothing">Back to clothing</a>
+    <form action="/clothing/<%=clothing._id%>/edit" method="GET">
+      <button type="submit">update <%= clothing.name %></button>
+    </form>
+    <a href="/clothing">Back to clothing</a>
   </body>
 </html>
